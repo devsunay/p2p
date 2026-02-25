@@ -19,8 +19,8 @@ const expressServer = http.createServer(app)
 // app.listen(8181, '0.0.0.0', () => {
 //   console.log("HTTP server running on port 8181");
 // });
-expressServer.listen(process.env.PORT|| 8080, "0.0.0.0", () => {
-  console.log("Server running at http://0.0.0.0:8181");
+expressServer.listen(process.env.PORT, "0.0.0.0", () => {
+  console.log("Server running at",process.env.PORT);
 });
 //const expressServer = app.listen(8181);
 //create our socket.io server... it will listen to our express port
@@ -33,7 +33,7 @@ expressServer.listen(process.env.PORT|| 8080, "0.0.0.0", () => {
 // });
 const io = new Server(expressServer,{
     cors: {
-        origin : true,
+        origin : "*",
         // origin: [
         //     // "*",
         //     'https://172.16.54.42' //if using a phone or another computer
