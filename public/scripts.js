@@ -5,7 +5,7 @@ const password = "x";
 
 document.querySelector("#user-name").innerHTML = userName;
 
-const socket = io.connect('https://192.168.85.7:8181',
+const socket = io.connect('https://p2p-production-a9fb.up.railway.app:8080',
     {
         auth:{
         userName,
